@@ -1,0 +1,139 @@
+ /* Logo temporal */
+#logo {
+    background-color: rgb(232, 232, 232);
+    display: block;
+    padding: 6px;
+}
+
+/* Asegura que el color del fondo abarque totalmente de izquiera a derecha */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del logo */
+#logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 70px;
+}
+
+/* Estilo de la imagen de fondo */
+#background img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    filter: brightness(40%);
+    position: inherit;
+}
+
+#texto-principal {
+    position: relative;
+    z-index: 10;
+}
+
+/* Asegura que el texto este por encima de la imagen */
+#texto-principal {
+    position: absolute;
+    top: 190px;
+    left: 420px;
+    right: 370px;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    text-align: justify;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Asegura que el mapa este por encima de la imagen */
+#mapa {
+    position: absolute;
+    top: 430px;
+    left: 590px;
+    right: 250px;
+    transform: translate(-50%, -50%);
+}
+
+/* Reseña */
+.checked {
+    color: orange;
+}
+
+/* Asegurar que las reseñas este por encima de la imagen */
+#reseña {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 170px;
+    right: 20px;
+    left: 1200px;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#reseña1 {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 290px;
+    right: 20px;
+    left: 1200px;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#reseña2 {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 407px;
+    right: 20px;
+    left: 1200px;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#reseña3 {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 507px;
+    right: 20px;
+    left: 1200px;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#reseña4 {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 607px;
+    right: 20px;
+    left: 1200px;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    border-radius: 7px;
+}
