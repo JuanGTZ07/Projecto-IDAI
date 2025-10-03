@@ -137,3 +137,17 @@ body {
     padding: 10px;
     border-radius: 7px;
 }
+
+#productos {
+    text-align: center;
+    font-size: 72px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 10px;
+    background-color: rgb(193, 198, 199);
+    margin-left: 300px;
+    margin-right: 300px;
+    transition: 0.9s;
+}
+#productos:hover {
+    transform: scale(1.02);
+}
