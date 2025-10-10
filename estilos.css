@@ -146,8 +146,18 @@ body {
     background-color: rgb(193, 198, 199);
     margin-left: 300px;
     margin-right: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     transition: 0.9s;
 }
 #productos:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+}
+
+#Contacto {
+    background-color: rgb(232, 232, 232);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: right;
+    font-size: 15px;
+    padding-right: 20px;
 }
