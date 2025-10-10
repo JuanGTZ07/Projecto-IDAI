@@ -1,7 +1,3 @@
-.imghover {
-    transform: 0.9s;
-}
-
 .imghover:hover {
     transform: scale(1.03);
 }
