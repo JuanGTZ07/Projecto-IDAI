@@ -1,0 +1,17 @@
+.imghover:hover {
+    transform: scale(1.03);
+}
+body{
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+    
+}
+#primerparrafo{
+    background-color: white;
+    color: black;
+}
+#segundoparrafo{
+    background-color: white;
+    color: black;
+}
