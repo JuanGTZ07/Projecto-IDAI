@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: rgb(255, 163, 24);
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+#busqueda {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
