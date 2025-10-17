@@ -48,3 +48,8 @@ body {
     font-size: 17px;
     cursor: pointer;
 }
+
+#productos {
+    display: flex;
+    flex-direction: column;
+}
