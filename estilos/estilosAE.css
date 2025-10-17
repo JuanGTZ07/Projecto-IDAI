@@ -50,6 +50,6 @@ body {
 }
 
 #productos {
-    display: flex;
-    flex-direction: column;
+    background-color: #bebcbc;
+    padding: 20px;
 }
