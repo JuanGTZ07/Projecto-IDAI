@@ -52,7 +52,7 @@ body {
 #productos {
     background-color: #bebcbc;
     padding: 20px;
-    display: grid;
+    display:table-cell;
     gap: 16px;
     align-items: start;
 }
