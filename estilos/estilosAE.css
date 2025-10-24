@@ -49,6 +49,11 @@ body {
     cursor: pointer;
 }
 
+#carrito {
+    float: right;
+    padding: 5px;
+}
+
 #productos {
     background-color: #bebcbc;
     display: flex;
@@ -70,11 +75,33 @@ img {
     text-align: center;
     overflow: hidden;
     max-height: 200px;
-    max-width: 300px;
+    max-width: 200px;
 }
 
 h3 {
-    text-align: right;
+    text-align: left;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: white;
+}
+
+.Agregarcarrito {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px black;
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+
+.Comprarahora {
+    background-color: rgb(255, 116, 29);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px black;
+    display: block;
+    float: right;
+    cursor: pointer;
+}
+
+.Agregarcarrito:active, .Comprarahora:active {
+    color: grey;
 }
