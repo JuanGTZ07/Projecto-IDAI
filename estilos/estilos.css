@@ -162,3 +162,6 @@ body {
     padding-right: 20px;
 }
 
+a {
+    text-decoration: none;
+}
