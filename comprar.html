@@ -4,6 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprar</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#header {
+    background-color: #004aad;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#timer {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#busqueda {
+    text-align: center;
+    margin: 20px;
+}
+
+#catalogo {
+    text-decoration: none;
+    background-color: #0078d4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#catalogo:hover {
+    background-color: #005ea2;
+}
+
+.contenedor {
+    background: white;
+    width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+button {
+    background-color: #00b894;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #019874;
+}
+
+#mensaje {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+⚙️ 3. JavaScript/comprar.js
+Guarda este archivo en la carpeta JavaScript/:
+
+javascript
+Copiar código
+// ----- Temporizador de descuento -----
+let minutos = 5;
+let segundos = 0;
+
+const minElem = document.getElementById("min");
+const segElem = document.getElementById("seg");
+
+function actualizarTimer() {
+    minElem.textContent = minutos.toString().padStart(2, "0");
+    segElem.textContent = segundos.toString().padStart(2, "0");
+}
+
+function iniciarTemporizador() {
+    const intervalo = setInterval(() => {
+        if (segundos === 0) {
+            if (minutos === 0) {
+                clearInterval(intervalo);
+                document.getElementById("header").textContent = 
+                    "¡El tiempo terminó! Ya no aplica el 10% de descuento.";
+                return;
+            }
+            minutos--;
+            segundos = 59;
+        } else {
+            segundos--;
+        }
+        actualizarTimer();
+    }, 1000);
+}
+actualizarTimer();
+iniciarTemporizador();
+
+// ----- Simulación de pago con tarjeta -----
+const form = document.getElementById("formPago");
+const mensaje = document.getElementById("mensaje");
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const tarjeta = document.getElementById("numeroTarjeta").value.trim();
+    const fecha = document.getElementById("fecha").value;
+    const cvv = document.getElementById("cvv").value.trim();
+    const monto = document.getElementById("monto").value.trim();
+
+    if (tarjeta.length !== 16 || isNaN(tarjeta)) {
+        mensaje.textContent = "Número de tarjeta inválido.";
+        mensaje.style.color = "red";
+        return;
+    }
+
+    if (cvv.length !== 3 || isNaN(cvv)) {
+        mensaje.textContent = "CVV inválido.";
+        mensaje.style.color = "red";
+        return;
+    }
+
+    if (nombre === "" || monto === "" || fecha === "") {
+        mensaje.textContent = "Por favor, completa todos los campos.";
+        mensaje.style.color = "red";
+        return;
+    }
+
+    // Simulación del pago exitoso
+    mensaje.textContent = "Pago realizado con éxito. ¡Gracias por tu compra!";
+    mensaje.style.color = "green";
+    form.reset();
+});
+    </style>
 </head>
 <link rel="stylesheet" href="estilos/comprar.css">
 <body>
@@ -12,6 +188,29 @@
     <div id="busqueda">
         <a href="Productos.html" id="catalogo"> Regresar a Catalogo</a>
     </div>
+     <div class="contenedor">
+        <h2>Datos de Pago con Tarjeta</h2>
+        <form id="formPago">
+            <label for="nombre">Nombre del Titular</label>
+            <input type="text" id="nombre" placeholder="Ej. Sara Valdez" required>
+
+            <label for="numeroTarjeta">Número de Tarjeta</label>
+            <input type="text" id="numeroTarjeta" maxlength="16" placeholder="0000 0000 0000 0000" required>
+
+            <label for="fecha">Fecha de Expiración</label>
+            <input type="month" id="fecha" required>
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" maxlength="3" placeholder="000" required>
+
+            <label for="monto">Monto a Pagar</label>
+            <input type="number" id="monto" placeholder="$" required>
+
+            <button type="submit">Pagar Ahora</button>
+        </form>
+        <p id="mensaje"></p>
+    </div>
+
     <script src="JavaScript/comprar.js"></script>
 </body>
 </html>
