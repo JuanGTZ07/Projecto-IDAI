@@ -1,6 +1,9 @@
 body {
-    margin: 0;
-    padding: 0;
+font-family: Arial, sans-serif;
+background-color: #f4f6f8;
+margin: 0;
+padding: 0;
+color: #333;
 }
 
 #header {
@@ -30,4 +33,91 @@ body {
 #busqueda a:hover {
     background-color: #bebcbc;
     color: black;
+}
+
+
+
+#timer {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#busqueda {
+    text-align: center;
+    margin: 20px;
+}
+
+#catalogo {
+    text-decoration: none;
+    background-color: #0078d4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#catalogo:hover {
+    background-color: #005ea2;
+}
+
+.contenedor {
+    background: white;
+    width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+button {
+    background-color: #00b894;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #019874;
+}
+
+#mensaje {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
 }
