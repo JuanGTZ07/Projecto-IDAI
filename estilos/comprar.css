@@ -35,12 +35,10 @@ color: #333;
     color: black;
 }
 
-
-
 #timer {
     display: inline-block;
-    background-color: #ffcc00;
-    color: #000;
+    background-color: rgb(255, 163, 24);
+    color: #ffffff;
     padding: 5px 10px;
     border-radius: 8px;
     font-weight: bold;
@@ -50,19 +48,6 @@ color: #333;
 #busqueda {
     text-align: center;
     margin: 20px;
-}
-
-#catalogo {
-    text-decoration: none;
-    background-color: #0078d4;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-#catalogo:hover {
-    background-color: #005ea2;
 }
 
 .contenedor {
