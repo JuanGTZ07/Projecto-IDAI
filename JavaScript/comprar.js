@@ -59,6 +59,9 @@ form.addEventListener("submit", (event) => {
         mensaje.style.color = "red";
         return;
     }
+    // simulacion datos de direccion
+    
+
 
     // Simulación del pago exitoso
     mensaje.textContent = "Pago realizado con éxito. ¡Gracias por tu compra!";
