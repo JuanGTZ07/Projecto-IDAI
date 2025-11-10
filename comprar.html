@@ -34,7 +34,40 @@
         </form>
         <p id="mensaje"></p>
     </div>
-
+    <div id="contenedordireccion">
+        <h2>Datos de direccion</h2>
+        <form action="formdireccion">
+            <label for="Nombre">Nombre completo (nombre y apellido)</label>
+            <input type="text" id="nombre" value="nombre" required placeholder="Juan Emilio Montemayor Salazar">
+            <label for="Municipio">Municipio</label>
+            <select name="Municipio" id="Municipio" required>
+                <option value="MTY">Monterrey</option>
+                <option value="APD">Apodaca</option>
+                <option value="JRZ">Juarez</option>
+                <option value="SNG">San Nicolas de los Garza</option>
+                <option value="GE">General Escobedo</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="GLP">Guadalupe</option>
+                <option value="SPGG">San Pedro Garza Garcia</option>
+                <option value="STG">Santiago</option>
+                <option value="PESQ">Pesqueria</option>
+                <option value="SV">Salinas Victoria</option>
+                <option value="CJ">Caredeyta Jimenez</option>
+                <option value="GIA">Garcia</option>
+                <option value="ElC">El Carmen</option>
+                <option value="GZZ">General Zuazua</option>
+                <option value="CDG">Cienega de Flores</option>
+            </select>
+            <label for="Calle">calle</label>
+            <input type="text" id="calle" placeholder="Calle" required>
+            <label for="Num">Numero exterior</label>
+            <input type="text" id="num" placeholder="123" required>
+            <label for="CodigoPostal">Codigo Postal</label>
+            <input type="text" id="CoPo" placeholder="12345" required>
+            <label for="NumTel">Numero de Telefono</label>
+            <input type="text" id="numtel" required>
+        </form>
+    </div>
     <script src="JavaScript/comprar.js"></script>
 </body>
 </html>
