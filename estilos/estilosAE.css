@@ -116,3 +116,7 @@ h3 {
 .Agregarcarrito:active, .Comprarahora:active {
     color: grey;
 }
+
+.precioart {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
