@@ -68,4 +68,6 @@ form.addEventListener("submit", (event) => {
 var form2 = document.getElementById("formdireccion");
 var msj = document.getElementById("mensaje2");
 
-function
+function datos() {
+    
+}

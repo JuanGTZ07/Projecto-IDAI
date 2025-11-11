@@ -13,43 +13,6 @@
         <a href="Productos.html" id="catalogo"> Regresar a Catalogo</a>
     </div>
     <div id="contenedores">
-        
-        <div id="contenedordireccion">
-            <h2>Datos de direccion</h2>
-            <form action="formdireccion">
-                <label for="Nombre">Nombre completo (nombre y apellido)</label>
-                <input type="text" id="nombre" required>
-                <label for="Municipio">Municipio</label>
-                <select name="Municipio" id="Municipio" required>
-                    <option value="MTY" id="MTY">Monterrey</option>
-                    <option value="APD" id="APD">Apodaca</option>
-                    <option value="JRZ" id="JRZ">Juarez</option>
-                    <option value="SNG" id="SNG">San Nicolas de los Garza</option>
-                    <option value="GE" id="GE">General Escobedo</option>
-                    <option value="SC" id="SC">Santa Catarina</option>
-                    <option value="GDL" id="GDL">Guadalupe</option>
-                    <option value="SPGG" id="SPGG">San Pedro Garza Garcia</option>
-                    <option value="STG" id="STG">Santiago</option>
-                    <option value="PESQ" id="PESQ">Pesqueria</option>
-                    <option value="SV" id="SV">Salinas Victoria</option>
-                    <option value="CJ" id="CJ">Caredeyta Jimenez</option>
-                    <option value="GIA" id="GIA">Garcia</option>
-                    <option value="ElC" id="ElC">El Carmen</option>
-                    <option value="GZZ" id="GZZ">General Zuazua</option>
-                    <option value="CDG" id="DCG">Cienega de Flores</option>
-                </select>
-                <label for="Calle">calle</label>
-                <input type="text" id="calle" required>
-                <label for="Num">Numero exterior</label>
-                <input type="text" id="num" maxlength="3" required>
-                <label for="CodigoPostal">Codigo Postal</label>
-                <input type="text" id="CoPo" maxlength="5" required>
-                <label for="NumTel">Numero de Telefono</label>
-                <input type="tel" id="numtel" maxlength="10" required>
-                <label for="Correo"> Correo Electronico</label>
-                <input type="email" id="email" required>
-            </form>
-        </div>
         <div class="contenedor">
             <h2>Datos de Pago con Tarjeta</h2>
             <form id="formPago">
@@ -64,11 +27,6 @@
 
                 <label for="cvv">CVV</label>
                 <input type="password" id="cvv" maxlength="3" placeholder="000" required>
-
-                <label for="monto">Monto a Pagar</label>
-                <input type="number" id="monto" placeholder="$" required>
-
-                <button type="submit">Pagar Ahora</button>
             </form>
             <p id="mensaje"></p>
         </div>
