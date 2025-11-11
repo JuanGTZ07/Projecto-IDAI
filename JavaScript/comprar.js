@@ -54,7 +54,7 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    if (nombre === "" || monto === "" || fecha === "") {
+    if (nombre === ""|| fecha === "") {
         mensaje.textContent = "Por favor, completa todos los campos.";
         mensaje.style.color = "red";
         return;
@@ -64,10 +64,3 @@ form.addEventListener("submit", (event) => {
     mensaje.style.color = "green";
     form.reset();
 });
-
-var form2 = document.getElementById("formdireccion");
-var msj = document.getElementById("mensaje2");
-
-function datos() {
-    
-}
