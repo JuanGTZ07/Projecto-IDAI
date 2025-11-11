@@ -64,13 +64,3 @@ form.addEventListener("submit", (event) => {
     mensaje.style.color = "green";
     form.reset();
 });
-
-const producto = localStorage.getItem('selectedProduct');
-const precio = localStorage.getItem('selectedPrice');
-
-if (producto && precio) {
-document.getElementById('producto').textContent = producto;
-document.getElementById('precio').textContent = precio;
-} else {
-document.body.innerHTML += '<p>No se ha seleccionado ningún producto.</p>';
-}
