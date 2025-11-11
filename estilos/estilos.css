@@ -1,8 +1,10 @@
  /* Logo temporal */
-#logo {
+#header {
     background-color: rgb(232, 232, 232);
-    display: block;
-    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Asegura que el color del fondo abarque totalmente de izquiera a derecha */
@@ -14,10 +16,21 @@ body {
 /* Estilo del logo */
 #logo img {
     display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 70px;
+    width: auto;
+    height: 40px;
+}
+
+#productos {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(193, 198, 199);
+    transition: 0.9s ease;
+    cursor: pointer;
+}
+
+#productos:hover {
+    transform: scale(1.05);
 }
 
 /* Estilo de la imagen de fondo */
@@ -136,22 +149,6 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px;
     border-radius: 7px;
-}
-
-#productos {
-    text-align: center;
-    font-size: 72px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding-top: 10px;
-    background-color: rgb(193, 198, 199);
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    transition: 0.9s;
-}
-#productos:hover {
-    transform: scale(1.05);
 }
 
 #Contacto {
