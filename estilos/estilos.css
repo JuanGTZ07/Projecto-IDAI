@@ -7,13 +7,11 @@
     flex-wrap: wrap;
 }
 
-/* Asegura que el color del fondo abarque totalmente de izquiera a derecha */
 body {
     margin: 0;
     padding: 0;
 }
 
-/* Estilo del logo */
 #logo img {
     display: block;
     width: auto;
@@ -33,7 +31,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Estilo de la imagen de fondo */
 #background img {
     display: block;
     margin: 0 auto;
@@ -48,12 +45,11 @@ body {
     z-index: 10;
 }
 
-/* Asegura que el texto este por encima de la imagen */
 #texto-principal {
     position: absolute;
-    top: 190px;
-    left: 420px;
-    right: 370px;
+    top: 30%;
+    left: 30%;
+    right: 30%;
     transform: translate(-50%, -50%);
     color: aliceblue;
     text-align: justify;
@@ -61,12 +57,12 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Asegura que el mapa este por encima de la imagen */
+
 #mapa {
     position: absolute;
-    top: 450px;
-    left: 590px;
-    right: 250px;
+    top: 70%;
+    left: 30%;
+    right: 30%;
     transform: translate(-50%, -50%);
 }
 
@@ -75,7 +71,7 @@ body {
     color: orange;
 }
 
-/* Asegurar que las reseñas este por encima de la imagen */
+
 #reseña {
     background-color: rgb(255, 255, 255);
     position: absolute;
@@ -162,3 +158,4 @@ body {
 a {
     text-decoration: none;
 }
+
