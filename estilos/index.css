@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header, nav, article, aside {
+    margin: 0;
+    padding: 0;
+}
+
+#grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(4, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+gap: 0;
+align-items: center;
+text-align: center;
+}
+
+#LOGO { grid-area: 1 / 1 / 2 / 4; }
+#navbar { grid-area: 2 / 1 / 3 / 4; }
+#info-principal { grid-area: 3 / 1 / 4 / 2; }
+#mapa { grid-area: 4 / 1 / 5 / 2; }
+#review { grid-area: 3 / 2 / 5 / 3; } 
