@@ -6,6 +6,7 @@ body {
 #header, nav, article, aside {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 #grid {
@@ -24,3 +25,7 @@ text-align: center;
 #info-principal { grid-area: 3 / 1 / 4 / 2; }
 #mapa { grid-area: 4 / 1 / 5 / 2; }
 #review { grid-area: 3 / 2 / 5 / 3; } 
+
+.checked {
+    color: orange;
+}
