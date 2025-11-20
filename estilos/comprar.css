@@ -111,10 +111,11 @@ button:hover {
 }
 
 #mensaje {
+    margin-top: 15px;
+    font-size: 15px;
     text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: bold;
+    color: red;
+    min-height: 20px;
 }
 
 #background {
