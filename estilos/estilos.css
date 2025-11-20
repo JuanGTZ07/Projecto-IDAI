@@ -171,14 +171,14 @@ a {
     color: black;
     padding: 10px 20px 10px 20px;
     font-size: 18px;
-    border: 1px solid black;
+
 }
 
 a {
     color: black;
     padding: 10px 20px 10px 20px;
     font-size: 18px;
-    border: 1px solid black;
+
     text-decoration: none;
 }
 #dropdown-menu {
@@ -208,4 +208,8 @@ a {
 
 #dropdown-menu:hover #dropdown-content {
     display: block;
+}
+
+button {
+    border: none;
 }
