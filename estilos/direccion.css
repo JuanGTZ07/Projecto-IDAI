@@ -101,3 +101,15 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
 }
+
+#background {
+    position: relative;
+    background-image: url(../multimedia/ferrete.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+}
