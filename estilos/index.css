@@ -1,13 +1,15 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#header, nav, article, aside {
+header, nav, article, aside {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 #grid {
 display: grid;
@@ -28,4 +30,54 @@ text-align: center;
 
 .checked {
     color: orange;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: buttonface;
+    width: 100%;
+}
+
+#dropdown {
+    color: black;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+a {
+    color: black;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    border: 1px solid black;
+    text-decoration: none;
+}
+#dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(208, 208, 208);
+    z-index: 1;
+}
+
+#dropdown-content a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+#dropdown-content a:hover {
+    background-color: rgb(217, 237, 255);
+}
+
+#dropdown-menu:hover #dropdown-content {
+    display: block;
 }

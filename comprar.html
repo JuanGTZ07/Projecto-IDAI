@@ -12,25 +12,25 @@
     <div id="busqueda">
         <a href="Productos.html" id="catalogo"> Regresar a Catalogo</a>
     </div>
-    <div class="contenedor">
-        <h2>Datos de Pago con Tarjeta</h2>
-        <form id="formPago">
-            <label for="nombre">Nombre del Titular</label>
-            <input type="text" id="nombre" placeholder="Ej. Sara Valdez" required>
+    <div id="background">
+        <div class="contenedor">
+            <h2>Datos de Pago con Tarjeta</h2>
+            <form id="formPago">
+                <label for="nombre">Nombre del Titular</label>
+                <input type="text" id="nombre" placeholder="Ej. Sara Valdez" required>
 
-            <label for="numeroTarjeta">Número de Tarjeta</label>
-            <input type="text" id="numeroTarjeta" maxlength="16" placeholder="0000 0000 0000 0000" required>
+                <label for="numeroTarjeta">Número de Tarjeta</label>
+                <input type="text" id="numeroTarjeta" maxlength="16" placeholder="0000 0000 0000 0000" required>
 
-            <label for="fecha">Fecha de Expiración</label>
-            <input type="month" id="fecha" required>
+                <label for="fecha">Fecha de Expiración</label>
+                <input type="month" id="fecha" required>
 
-            <label for="cvv">CVV</label>
-            <input type="password" id="cvv" maxlength="3" placeholder="000" required>
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" maxlength="3" placeholder="000" required>
 
-            <button type="submit">Pagar Ahora</button>
-        </form>
-        <p id="mensaje"></p>
-        
+                <button type="submit">Pagar Ahora</button>
+            </form>            
+        </div>
     </div>
     <script src="JavaScript/comprar.js"></script>
 </body>
