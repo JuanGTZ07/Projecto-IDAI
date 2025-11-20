@@ -54,7 +54,7 @@ color: #333;
     background: white;
     width: 400px;
     margin: 30px auto;
-    padding: 25px;
+    padding: 25px 25px 10px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     display: flex;
@@ -114,4 +114,16 @@ button:hover {
     font-size: 18px;
     margin-top: 20px;
     font-weight: bold;
+}
+
+#background {
+    position: relative;
+    background-image: url(../multimedia/compra.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
 }
