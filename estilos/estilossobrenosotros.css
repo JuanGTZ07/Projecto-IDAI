@@ -45,3 +45,11 @@ header h1{
     font-size: 1rem;
     margin-top: 10px;
 }
+
+footer{
+    background-color: #cdb284;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
