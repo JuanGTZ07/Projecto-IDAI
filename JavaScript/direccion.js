@@ -7,6 +7,8 @@ function direccion() {
         msj.style.color = "red";
     }
     else {
+        const email = document.getElementById("")
+
         window.location.href = "comprar.html"
     }
 }
