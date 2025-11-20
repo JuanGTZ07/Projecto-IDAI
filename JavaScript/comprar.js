@@ -36,7 +36,7 @@ const mensaje = document.getElementById("mensaje");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const nombre = document.getElementById("nombre").value.trim();
+    const nombretarjeta = document.getElementById("nombre").value.trim();
     const tarjeta = document.getElementById("numeroTarjeta").value.trim();
     const fecha = document.getElementById("fecha").value;
     const cvv = document.getElementById("cvv").value.trim();
@@ -54,7 +54,7 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    if (nombre === ""|| fecha === "") {
+    if (nombretarjeta === ""|| fecha === "") {
         mensaje.textContent = "Por favor, completa todos los campos.";
         mensaje.style.color = "red";
         return;
@@ -62,5 +62,6 @@ form.addEventListener("submit", (event) => {
     // Simulación del pago exitoso
     mensaje.textContent = "Pago realizado con éxito. ¡Gracias por tu compra!";
     mensaje.style.color = "green";
-    form.reset();
+    form.reset(); 
+
 });
