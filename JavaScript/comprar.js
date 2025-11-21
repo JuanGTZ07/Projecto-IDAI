@@ -1,5 +1,6 @@
 let minutos = 5;
 let segundos = 0;
+let descuentoActivo = true;
 
 const minElem = document.getElementById("min");
 const segElem = document.getElementById("seg");
@@ -14,8 +15,10 @@ function iniciarTemporizador() {
         if (segundos === 0) {
             if (minutos === 0) {
                 clearInterval(intervalo);
-                document.getElementById("header").textContent = 
+                descuentoActivo = false;
+                document.getElementById("header").textContent =
                     "¡El tiempo terminó! Ya no aplica el 10% de descuento.";
+                actualizarPrecioFinal();
                 return;
             }
             minutos--;
@@ -26,10 +29,24 @@ function iniciarTemporizador() {
         actualizarTimer();
     }, 1000);
 }
+
+function actualizarPrecioFinal() {
+    const precioOriginal = parseFloat(localStorage.getItem("producto_precio")) || 0;
+    let precioFinal = precioOriginal;
+
+    if (descuentoActivo) {
+        precioFinal = precioOriginal * 0.9;
+    }
+
+    const precioElem = document.getElementById("precioFinal");
+    if (precioElem) {
+        precioElem.textContent = "$" + precioFinal.toFixed(2);
+    }
+}
+
 actualizarTimer();
 iniciarTemporizador();
 
-// ----- Simulación de pago con tarjeta -----
 const form = document.getElementById("formPago");
 const mensaje = document.getElementById("mensaje");
 
@@ -53,32 +70,32 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    if (nombretarjeta === ""|| fecha === "") {
+    if (nombretarjeta === "" || fecha === "") {
         mensaje.textContent = "Por favor, completa todos los campos.";
         mensaje.style.color = "red";
         return;
     }
-    // Simulación del pago exitoso
+
     mensaje.textContent = "Pago realizado con éxito. ¡Gracias por tu compra!";
     mensaje.style.color = "green";
-    form.reset(); 
-
+    form.reset();
 });
 
 window.addEventListener("DOMContentLoaded", () => {
     const nombre = localStorage.getItem("producto_nombre");
-    const precio = localStorage.getItem("producto_precio");
-
-    console.log("Producto seleccionado:", nombre, precio);
+    const precio = parseFloat(localStorage.getItem("producto_precio")) || 0;
 
     const contenedor = document.querySelector(".contenedor");
 
     const resumen = document.createElement("div");
     resumen.innerHTML = `
-        <h3>Producto seleccionado</h3>
+        <h2>Producto seleccionado</h2>
         <p><strong>${nombre}</strong></p>
-        <p>Precio: ${precio}</p>
+        <p>Precio original: $${precio.toFixed(2)}</p>
+        <p>Precio con descuento: <span id="precioFinal"></span></p>
     `;
 
     contenedor.prepend(resumen);
+
+    actualizarPrecioFinal();
 });
