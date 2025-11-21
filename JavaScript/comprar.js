@@ -64,3 +64,21 @@ form.addEventListener("submit", (event) => {
     form.reset(); 
 
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    const nombre = localStorage.getItem("producto_nombre");
+    const precio = localStorage.getItem("producto_precio");
+
+    console.log("Producto seleccionado:", nombre, precio);
+
+    const contenedor = document.querySelector(".contenedor");
+
+    const resumen = document.createElement("div");
+    resumen.innerHTML = `
+        <h3>Producto seleccionado</h3>
+        <p><strong>${nombre}</strong></p>
+        <p>Precio: ${precio}</p>
+    `;
+
+    contenedor.prepend(resumen);
+});

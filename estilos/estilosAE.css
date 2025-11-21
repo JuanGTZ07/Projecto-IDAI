@@ -120,3 +120,33 @@ h3 {
 .precioart {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.resumen-producto {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.resumen-producto h3 {
+    color: #004aad;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.res-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 8px 0;
+}
+
+.res-precio {
+    font-size: 19px;
+    font-weight: bold;
+    color: #00b894;
+    margin-top: 5px;
+}
