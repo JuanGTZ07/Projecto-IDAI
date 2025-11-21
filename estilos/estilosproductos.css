@@ -30,17 +30,6 @@ body {
     padding: 20px;
 }
 
-.btn-regresar {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 20px;
-    background: #75565a;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -76,4 +65,88 @@ body {
     text-align: center;
     padding: 15px;
     font-size: 18px;
+}
+
+#logo {
+    height: 90px;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+#topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #b66f42;
+}
+
+#dropdown {
+    color: black;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+
+}
+
+a {
+    color: black;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+
+    text-decoration: none;
+}
+#dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(208, 208, 208);
+    z-index: 1;
+}
+
+#dropdown-content a {
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+#dropdown-content a:hover {
+    background-color: rgb(217, 237, 255);
+}
+
+#dropdown-menu:hover #dropdown-content {
+    display: block;
+}
+
+button {
+    border: none;
+}
+
+@media (max-width: 700px) {
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #navbar {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
