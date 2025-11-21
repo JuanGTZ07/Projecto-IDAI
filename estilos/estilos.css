@@ -1,4 +1,3 @@
- /* Logo temporal */
 #header {
     background-color: rgb(232, 232, 232);
     display: flex;
@@ -68,11 +67,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Reseña */
 .checked {
     color: orange;
 }
-
 
 #reseña {
     background-color: rgb(255, 255, 255);
@@ -213,3 +210,4 @@ a {
 button {
     border: none;
 }
+
