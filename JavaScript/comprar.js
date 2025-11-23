@@ -76,9 +76,13 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    mensaje.textContent = "Pago realizado con éxito. ¡Gracias por tu compra!";
+    mensaje.textContent = "Redirigiendo...";
     mensaje.style.color = "green";
     form.reset();
+
+    setTimeout(() => {
+            window.location.href = "index.html"
+        }, 1200);
 });
 
 window.addEventListener("DOMContentLoaded", () => {
