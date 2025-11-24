@@ -86,9 +86,15 @@ form.addEventListener("submit", (event) => {
     const producto = localStorage.getItem("producto_nombre");
     const precioOriginal = parseFloat(localStorage.getItem("producto_precio")) || 0;
 
-    const precioFinal = descuentoActivo
-        ? (precioOriginal * 0.90).toFixed(2)
-        : precioOriginal.toFixed(2);
+    let precioFinalCompra;
+
+    if (descuentoActivo) {
+        precioFinalCompra = (precioOriginal * 0.90).toFixed(2);
+    } else {
+        precioFinalCompra = precioOriginal.toFixed(2);
+    }
+
+    localStorage.setItem("producto_precio_final", precioFinalCompra);
 
     const emailData = {
         to_email: emailComprador,
@@ -98,7 +104,7 @@ form.addEventListener("submit", (event) => {
         numero: numero,
         cp: cp,
         producto: producto,
-        precio: precioFinal
+        precio: precioFinalCompra
     };
 
     emailjs.send("service_ycx2dlw", "template_h9judqg", emailData)
@@ -107,7 +113,7 @@ form.addEventListener("submit", (event) => {
             mensaje.style.color = "green";
 
             setTimeout(() => {
-                window.location.href = "index.html";
+                window.location.href = "gracias.html";
             }, 1500);
         })
         .catch((error) => {
@@ -116,7 +122,6 @@ form.addEventListener("submit", (event) => {
             console.error(error);
         });
 });
-
 
 window.addEventListener("DOMContentLoaded", () => {
     const nombre = localStorage.getItem("producto_nombre");
