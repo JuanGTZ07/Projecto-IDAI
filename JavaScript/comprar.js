@@ -76,14 +76,48 @@ form.addEventListener("submit", (event) => {
         return;
     }
 
-    mensaje.textContent = "Redirigiendo...";
-    mensaje.style.color = "green";
-    form.reset();
+    const nombreComprador = localStorage.getItem("NombreComprador");
+    const emailComprador = localStorage.getItem("EmailComprador");
 
-    setTimeout(() => {
-            window.location.href = "index.html"
-        }, 1200);
+    const municipio = localStorage.getItem("Municipio");
+    const calle = localStorage.getItem("Calle");
+    const numero = localStorage.getItem("Numero");
+    const cp = localStorage.getItem("CP");
+
+    const producto = localStorage.getItem("producto_nombre");
+    const precioOriginal = parseFloat(localStorage.getItem("producto_precio")) || 0;
+
+    const precioFinal = descuentoActivo
+        ? (precioOriginal * 0.90).toFixed(2)
+        : precioOriginal.toFixed(2);
+
+    const emailData = {
+        to_email: emailComprador,
+        nombre: nombreComprador,
+        municipio: municipio,
+        calle: calle,
+        numero: numero,
+        cp: cp,
+        producto: producto,
+        precio: precioFinal
+    };
+
+    emailjs.send("service_ycx2dlw", "template_h9judqg", emailData)
+        .then(() => {
+            mensaje.textContent = "Pago realizado. Enviando confirmación...";
+            mensaje.style.color = "green";
+
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 1500);
+        })
+        .catch((error) => {
+            mensaje.textContent = "Error enviando el correo.";
+            mensaje.style.color = "red";
+            console.error(error);
+        });
 });
+
 
 window.addEventListener("DOMContentLoaded", () => {
     const nombre = localStorage.getItem("producto_nombre");
