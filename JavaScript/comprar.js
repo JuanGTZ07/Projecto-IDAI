@@ -78,7 +78,6 @@ form.addEventListener("submit", (event) => {
 
     const nombreComprador = localStorage.getItem("NombreComprador");
     const emailComprador = localStorage.getItem("EmailComprador");
-
     const municipio = localStorage.getItem("Municipio");
     const calle = localStorage.getItem("Calle");
     const numero = localStorage.getItem("Numero");
